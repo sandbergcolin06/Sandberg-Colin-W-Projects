@@ -24,13 +24,17 @@ def make_buttons(gui, entry_line):
                         command=lambda: CF.pv_func(entry_line), height=1, width=7)
     pv_button.grid(row=row1,column=2)
 
+    pmt_button = Button(gui, text=str("PMT"), font= font, fg='black', bg='blue',
+                        command=lambda: CF.pmt_func(entry_line), height=1, width=7)
+    pmt_button.grid(row=row1,column=3)
+
     fv_button = Button(gui, text=str("FV"), font=font, fg='black', bg='blue',
                         command=lambda: CF.fv_func(entry_line), height=1, width=7)
-    fv_button.grid(row=row1,column=3)
+    fv_button.grid(row=row1,column=4)
 
     cpt_button = Button(gui, text=str("CPT"), font=font, fg='black', bg='blue',
                         command=CF.cpt_func, height=1, width=7)
-    cpt_button.grid(row=row1,column=4)
+    cpt_button.grid(row=row2,column=3)
 
     # number buttons
     button1 = Button(gui, text=str(1), font=font, fg='black', bg='blue',
